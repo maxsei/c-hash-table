@@ -59,5 +59,15 @@ hash_table_entry_t *hash_table_lookup(const void *key, const size_t len, hash_ta
 int hash_table_insert(hash_table_entry_t *hash_table_entry,
                        hash_table_t *hash_table);
 
+/******************************************************************************
+ * Function:         _hash uses the djb2 hash function modified from here
+ * https://gist.github.com/MohamedTaha98/ccdf734f13299efb73ff0b12f7ce429f
+ * Description:      hash function for some data
+ * Where:
+ *                   void * data - data to take the hash of
+ *                   size_t len - length of the data to hash
+ * Return:           uint64_t
+ * Error:            N/A
+ *****************************************************************************/
 uint64_t _hash(const void *data, const size_t len);
 #endif

@@ -2,16 +2,6 @@
 #include <check.h>
 #include <stdio.h>
 
-/******************************************************************************
- * Function:         _hash uses the djb2 hash function modified from here
- * https://gist.github.com/MohamedTaha98/ccdf734f13299efb73ff0b12f7ce429f
- * Description:      hash function for some data
- * Where:
- *                   void * data - data to take the hash of
- *                   size_t len - length of the data to hash
- * Return:           uint64_t
- * Error:            N/A
- *****************************************************************************/
 uint64_t _hash(const void *data, const size_t len) {
   uint64_t ret = 5381;
   const void *p = data;
